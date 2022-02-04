@@ -1,4 +1,6 @@
 import './App.css'
+import React,{useEffect} from 'react';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +11,16 @@ import Footer from './components/layouts/Footer';
 import Home from './components/Home'
 import ProductDetails from './components/product/ProductDetails';
 import Login from './components/user/Login';
+import { Register } from './components/user/Register';
+
+import { loaduser } from './action/userActions';
+import store from './store'
 function App() {
+
+
+  useEffect(() => {
+    store.dispatch(loaduser())
+  }, [ ]);
   return (
     <Router>
     <div className="App">
@@ -29,6 +40,10 @@ function App() {
 
 <Login/>
 </Route >
+<Route path="/register" exact>
+    
+    <Register/>
+    </Route >
      </div>
       <Footer/>
     </div>

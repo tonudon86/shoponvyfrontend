@@ -5,7 +5,7 @@ import {
     PRODUCT_DETAILS_FAIL,
     PRODUCT_DETAILS_REQUEST,
     PRODUCT_DETAILS_SUCCESS,
-} from '../constents/productConstants'
+} from '../constants/productConstants'
 
 const host="http://127.0.0.1:5000"
 // const host="https://shoponvy.herokuapp.com"
