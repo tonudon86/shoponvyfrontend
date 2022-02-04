@@ -37,7 +37,7 @@ const alert=useAlert()
   const dispatch = useDispatch()
 
   const { loading, products, error, productsCount ,resPerPage} = useSelector(state => state.products)
- console.log(products)
+//  console.log(products)
   useEffect(() => {
  if (error) {
    return alert.error(error)
